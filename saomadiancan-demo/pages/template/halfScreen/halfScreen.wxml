@@ -1,0 +1,8 @@
+<template name="halfScreen">
+    <view class="renshu">
+        <picker mode="selector"></picker>
+    </view>
+    <view class="time">
+        <picker mode="time"></picker>
+    </view>
+</template>

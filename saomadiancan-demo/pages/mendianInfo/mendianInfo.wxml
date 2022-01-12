@@ -1,0 +1,43 @@
+<view class="header">
+    <!-- 轮播图 -->
+    <view>
+        <swiper class="banners" indicator-color="rgba(0, 0, 0, .3)" indicator-active-color="#D43C33" autoplay circular>
+            <swiper-item>
+                <image src="{{'http://119.23.63.87/phpsaomaserver/uploads/' +merchant.swiperImage1}}"></image>
+            </swiper-item>
+            <swiper-item>
+                <image src="{{'http://119.23.63.87/phpsaomaserver/uploads/' +merchant.swiperImage2}}"></image>
+            </swiper-item>
+            <swiper-item>
+                <image src="{{'http://119.23.63.87/phpsaomaserver/uploads/' +merchant.swiperImage3}}"></image>
+            </swiper-item>
+        </swiper>
+    </view>
+</view>
+<view class="order">
+    <view class="mnane">{{merchant.merchantName}}</view>
+    <view class="caozuo">
+        <view class="ziqu" bindtap="tomendianMenu">
+            <view class="iconfont icon-diancan"></view>
+            <span>门店点餐</span>
+        </view>
+        <view class="yuding" bindtap="toreserve">
+            <view class="iconfont icon-yuding"></view>
+            <span>预定</span>
+        </view>
+    </view>
+</view>
+<view class="info">
+    <view class="address" bindtap="tobusinessAddress">
+        <span>营业地址</span>
+        <view class="iconfont icon-dizhi"></view>
+    </view>
+    <view class="call" bindtap="handleShowModal">
+        <span>联系商家</span>
+        <view class="iconfont icon-24gl-phoneLoudspeaker"></view>
+    </view>
+    <view class="orderDetail" bindtap="tohistoricalOrder">
+        <span>历史订单</span>
+        <view class="iconfont icon-dingdan"></view>
+    </view>
+</view>

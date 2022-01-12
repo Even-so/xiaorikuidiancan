@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mendian/mendian",
+    "pages/personal/personal",
+    "pages/allHistoricalOrder/allHistoricalOrder",
+    "pages/sign/sign",
+    "pages/reserve/reserve",
+    "pages/mendianInfo/mendianInfo",
+    "pages/businessAddress/businessAddress",
+    "pages/payment/payment",
+    "pages/mendianMenu/mendianMenu",
+    "pages/historicalOrder/historicalOrder",
+    "pages/beizhu/beizhu",
+    "pages/contactHotline/contactHotline"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#BB8888"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
+}

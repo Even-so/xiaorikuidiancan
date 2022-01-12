@@ -1,0 +1,14 @@
+<view>
+    <ul>
+        <li bindtap="tomendianInfo" wx:for="{{merchantList}}" wx:key="merchantId" data-merchantInfo="{{item}}" data-index="{{index}}">
+            <view class="image">
+                <image src="{{'http://119.23.63.87/phpsaomaserver/uploads/' +item.indexImage}}"></image>
+            </view>
+            <view class="content">
+                <span class="name">{{item.merchantName}}</span>
+                <span class="address">地址:{{item.adddess}}</span>
+                <span class="flag">{{item.businessStatus==1?"营业中":"休息中"}}</span>
+            </view>
+        </li>
+    </ul>
+</view>

@@ -1,0 +1,27 @@
+<view class="orders-list" wx:for="{{orderList}}" wx:key="orderId" data-index="{{index}}">
+    <view class="header">
+        <view class="title">
+            <view class="name">{{merchantName}}</view>
+            <view class="state">{{item.paymentStatus==1?"已支付":"未支付"}}</view>
+        </view>
+        <view class="info">
+            <view class="zhouzi-number">{{item.tableNumber}}号桌</view>
+            <view class="qucan-nimber">取餐码:#{{item.mealCode}}</view>
+        </view>
+    </view>
+    <!-- wx:for="{{GoodsListData}}" wx:key="dishId" wx:for-item="pro" data-index="{{index}}" -->
+    <view class="content">
+        <view class="shopping-image">
+            <image src="{{'http://119.23.63.87/phpsaomaserver/uploads/' +item.dishList.menuImg}}"></image>
+        </view>
+        <view class="shopping-content">
+            <view class="shopping-ninfo">
+                <view class="shopping-name">{{item.dishList.dishName}}</view>
+                <view class="shopping-num">共{{(item.goodsNumber.length)/2}}件商品</view>
+            </view>
+            <view class="shopping-time">支付时间:{{item.paymentTime}}</view>
+        </view>
+        <view class="shopping-price">￥{{item.payPrice}}</view>
+    </view>
+    <view class="agein-shopping" bindtap="tomendian">再来一单</view>
+</view>

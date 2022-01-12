@@ -1,0 +1,34 @@
+<view class="type">
+    <span>请选择就餐方式</span>
+    <view class="type-choose">
+        <view class="tangshi iconfont icon-tangshi- {{_num == 1?'choose':''}}" bindtap="changetype" data-num="1">
+            <span data-num="1">堂食</span>
+        </view>
+        <view class=" dabao iconfont icon-waidai {{_num == 2?'choose':''}}" bindtap="changetype" data-num="2">
+            <span data-num="2">打包</span>
+        </view>
+    </view>
+</view>
+<view class="shangpinList">
+    <view class="shangpin" wx:for="{{cart}}" wx:key="this">
+        <view class="image">
+            <image src="{{'http://119.23.63.87/phpsaomaserver/uploads/' +item.menuImg}}" />
+        </view>
+        <view class="info">
+            <view class="name">{{item.dishName}}</view>
+            <view class="other">X{{item.shuliang}}</view>
+            <!-- <view class="other">生的</view> -->
+        </view>
+        <view class="price">￥{{item.shuliang*item.dishPrice}}</view>
+    </view>
+</view>
+<view class="beizhu">
+    <view class="">备注</view>
+    <view class="" bindtap="handleother">
+        {{textareaValue.length !=0?textareaValue:"可输入备注要求 >"}}
+    </view>
+</view>
+<view class="footorder">
+    <view class="all-price">￥{{total*1+packingFee*1}}</view>
+    <view class="settlement" bindtap="hanglepay">立即支付</view>
+</view>

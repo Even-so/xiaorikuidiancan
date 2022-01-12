@@ -1,0 +1,75 @@
+page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F4F4F5;
+}
+
+.all {
+    width: 500rpx;
+    height: 500rpx;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+
+
+.section {
+    flex: 1;
+    height: 350rpx;
+}
+
+.section2 {
+    border-left: 1rpx solid #BB8888;
+}
+
+.section__title {
+    text-align: center;
+    margin-top: 50rpx;
+    font-size: 40rpx;
+    color: black;
+}
+
+.picker {
+    font-size: 50rpx;
+    text-align: center;
+    margin-top: 100rpx;
+    color: black;
+}
+
+.xuanze {
+    display: flex;
+    background-color: #FBFBFB;
+    border-radius: 20rpx;
+    box-shadow: 0px 0px 10px #BB88888a;
+
+}
+
+.queren {
+    text-align: center;
+    margin: 20rpx 0;
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 300rpx;
+    background-color: #BB8888;
+    border-radius: 150rpx;
+    margin-left: 100rpx;
+    height: 130rpx;
+    font-weight: 400;
+    box-shadow: 0px 0px 5px #BB88888a;
+
+}
+
+.queren :first-child {
+    padding-top: 10rpx;
+    padding-bottom: 15rpx;
+    font-size: 40rpx;
+}
+
+.queren :last-child {
+    font-size: 18rpx;
+}

@@ -1,0 +1,55 @@
+<view class="all">
+    <view class="header" style="width: 750rpx; height: 250rpx; display: flex; box-sizing: border-box">
+        <view class="mendianName">
+            <view class="name">老友记</view>
+            <view class="orders" bindtap="tohistoricalOrder">历史订单</view>
+        </view>
+        <view class="search">
+            <input type="text" placeholder="搜索商品"></input>
+            <view>搜索</view>
+        </view>
+    </view>
+    <view class="content menu">
+        <!--  -->
+        <view class="leftContent">
+            <scroll-view class="left-menu" scroll-y="true" scroll-with-animation scroll-into-view="{{leftViewId}}">
+                <view class="menu-item {{index==currentIndex?'menu-active':''}}" wx:for="{{navList}}" wx:key="this" data-id="menu{{index}}" data-i="{{index}}" bindtap="changeMenu">
+                    {{item.className}}
+                </view>
+                <text class="menu-item-kongbai"></text>
+            </scroll-view>
+        </view>
+        <view class="rightContent right-box">
+            <scroll-view class="right_menu" enable-flex scroll-y='true' scroll-with-animation scroll-into-view="{{rightViewId}}" bindscroll="getScroll" enable-flex>
+                <view class="pro-item" wx:for="{{navList}}" wx:key="this" id="menu{{index}}" data-index1="{{index}}" bindtap="getNavListIndex">
+                    <view class="right_menu_head">{{item.className}}</view>
+                    <view class="list-box">
+                        <view class="menu-list menu_list" wx:for-item='items' wx:for="{{item.list}}" wx:key="this">
+                            <image src="{{'http://119.23.63.87/phpsaomaserver/uploads/' +items.menuImg}}"></image>
+                            <view class="menu-info">
+                                <view class="menu-name">{{items.dishName}}</view>
+                                <view class="menu-price">￥{{items.dishPrice}}</view>
+                            </view>
+                            <!-- items.flag为true显示如下 -->
+                            <view wx:if="{{items.flag}}" class="shop-info" wx:key="{{items.dishId}}">
+                                <view class="reduce iconfont  icon-jianshao" data-items="{{items}}" data-index="{{index}}" bindtap="subshuliang"></view>
+                                <input class="add-input" bindblur="inputshuliang" confirm-type="done" type="number" data-index="{{index}}" data-items="{{items}}" value="{{items.shuliang}}"></input>
+                                <view class=" iconfont icon-htmal5icon18" data-items="{{items}}" data-index="{{index}}" bindtap="addshuliang"></view>
+                            </view>
+                            <!-- items.flag为false显示如下 -->
+                            <view wx:else class="add iconfont icon-tianjia" data-items="{{items}}" data-index="{{index}}" bindtap="addCart"></view>
+                        </view>
+                    </view>
+                </view>
+                <!-- 空白格 -->
+                <view class="kongbai"></view>
+            </scroll-view>
+        </view>
+    </view>
+    <view class="footorder">
+        <view class="shopping-Cart iconfont icon-gouwuchekong"></view>
+        <view class="shuliang">{{cartNum}}</view>
+        <view class="all-price {{cartNum!=0?'all-price-ing':''}}">￥{{total}}</view>
+        <view class="settlement {{cartNum!=0?'settlement_cart':''}}" bindtap="topayment">结算</view>
+    </view>
+</view>

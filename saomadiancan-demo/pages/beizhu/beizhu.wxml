@@ -1,0 +1,4 @@
+<textarea value="{{textareaValue}}" bindinput="textareaInput" placeholder="口味、包装等要求" name="" id="" cols="30" rows="10" maxlength="50">
+    <view class="textarea-counter">{{textareaValue.length}}/50</view>
+</textarea>
+<view class="complete" bindtap="hanglesubmit">完成</view>

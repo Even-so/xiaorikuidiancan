@@ -1,0 +1,90 @@
+page {
+  background-color: #F5F5F5;
+}
+
+.personal {
+  position: relative;
+}
+
+/* 头部 */
+.setting {
+  padding-left: 20rpx;
+  background-color: #BB8888;
+  border-bottom-right-radius: 40%;
+  border-bottom-left-radius: 40%;
+  padding-top: 30rpx;
+  display: flex;
+  height: 200rpx;
+  position: relative;
+  box-shadow: 0px 0px 5px rgba(100, 100, 100, .5);
+
+}
+
+.name {
+  font-size: 60rpx;
+  color: black;
+}
+
+.personalImg image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  position: absolute;
+  right: 30rpx;
+
+}
+
+/* 中间内容 */
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.mendian,
+.dingdan,
+.youhuiquan,
+.vipcard {
+  height: 300rpx;
+  background: #ffffff;
+  display: flex;
+  flex: 0 0 40%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 0px 5px rgba(100, 100, 100, .5);
+  box-sizing: border-box;
+  margin: 35rpx;
+  border-radius: 20%;
+}
+
+.image {
+  font-size: 80rpx;
+  color: #BB8888;
+}
+
+.content view span {
+  margin-top: 30rpx;
+
+}
+
+/* 反馈与建议的样式 */
+.button {
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.button::after {
+  border: none;
+  border-radius: 0;
+}
+
+.button span {
+  margin-top: 30rpx;
+
+}
+
+.button .iconfont {
+  height: 80rpx;
+}

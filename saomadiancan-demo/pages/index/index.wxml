@@ -1,0 +1,27 @@
+<!-- index.wxml -->
+<view class="personal">
+  <view class="setting">
+    <view class="name">你好！{{userInfo.nickName}}</view>
+    <view class="personalImg">
+      <image src="{{userInfo.avatarUrl}}"></image>
+    </view>
+  </view>
+  <view class="content">
+    <view class="mendian" bindtap="tomendian">
+      <view class="image iconfont icon-mendian"></view>
+      <span>常用门店</span>
+    </view>
+    <view class="dingdan" bindtap="toallHistoricalOrder">
+      <view class="image iconfont icon-dingdan"></view>
+      <span>我的订单</span>
+    </view>
+    <button class='youhuiquan button' open-type="feedback" style="width: 150rpx; position: relative; left: -8rpx; top: 0rpx">
+      <view class="image iconfont icon-huiyuanqia"></view>
+      <span>反馈与建议</span>
+    </button>
+    <view class="vipcard" bindtap="topersonal">
+      <view class="image iconfont icon-shezhi"></view>
+      <span>个人信息</span>
+    </view>
+  </view>
+</view>

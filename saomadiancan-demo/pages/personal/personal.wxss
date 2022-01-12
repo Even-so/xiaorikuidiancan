@@ -1,0 +1,96 @@
+page {
+    background-color: #F9F9F9;
+}
+
+.touxiang {
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50rpx 0;
+}
+
+.touxiang image {
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 50%;
+}
+
+.info {
+    background-color: #FFFFFF;
+    padding: 0rpx 30rpx;
+    margin-top: 20rpx;
+
+}
+
+.info>view {
+    height: 100rpx;
+    border-bottom: 4rpx solid #F9F9F9;
+}
+
+.namesetting {
+    color: #A8A8A8;
+}
+
+.section,
+.telephoneNumber,
+.rellyname,
+.name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section {
+    line-height: 100rpx;
+}
+
+.rellyname input {
+    direction: rtl;
+    color: #A8A8A8;
+    text-align: right;
+}
+
+.telnum {
+    display: flex;
+}
+
+.telnum span {
+    color: #A8A8A8;
+    line-height: 100rpx;
+    margin-right: 20rpx;
+}
+
+.telnum button {
+    height: 60rpx;
+    background-color: rgb(255, 255, 255);
+    border: 2rpx solid #C0DCFF;
+    border-radius: 8rpx;
+    font-size: 25rpx;
+    color: #C0DCFF;
+    text-align: center;
+    margin-top: 20rpx;
+    padding: 0;
+    padding-top: 13rpx;
+}
+
+button::after {
+    border: 0;
+}
+
+picker view {
+    color: #A8A8A8;
+}
+
+/* 提交修改 */
+.submit {
+    margin-top: 30rpx;
+    width: calc(100vw - 60rpx);
+    margin-left: 30rpx;
+    background-color: #222222;
+    color: white;
+    height: 90rpx;
+    line-height: 90rpx;
+    text-align: center;
+    border-radius: 90rpx;
+}
